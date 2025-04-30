@@ -1,6 +1,6 @@
 let db;
 
-export function initInserimento() {
+function initInserimento() {
   const oggi = new Date().toISOString().split('T')[0];
   document.getElementById('data-lavoro').value = oggi;
 
@@ -80,3 +80,6 @@ function resetForm() {
   ['commessa', 'cliente', 'importo', 'saldato', 'extra-consegna', 'saldo']
     .forEach(id => document.getElementById(id).value = '');
 }
+
+
+window.initInserimento = initInserimento;
