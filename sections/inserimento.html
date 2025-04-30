@@ -1,0 +1,52 @@
+<h2>Inserimento Attività</h2>
+
+<div class="mb-3">
+  <label for="data-lavoro" class="form-label">Seleziona Data</label>
+  <input type="date" id="data-lavoro" class="form-control form-control-sm" />
+</div>
+
+<div class="mt-4">
+  <h4>Aggiungi Nuovo Lavoro</h4>
+  <ul id="riepilogo-lavori" class="list-group mb-3"></ul>
+
+  <table class="table table-bordered">
+    <thead class="table-light">
+      <tr>
+        <th>Commessa</th>
+        <th>Cliente</th>
+        <th>Contratto</th>
+        <th>Saldo</th>
+        <th>Extra Consegna</th>
+        <th>Pagamento</th>
+        <th>Azioni</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <select id="commessa" class="form-select form-select-sm">
+            <option value="">Seleziona Commessa</option>
+            <option value="MOOV">MOOV</option>
+            <option value="OLIE">OLIE</option>
+          </select>
+        </td>
+        <td><input type="text" id="cliente" class="form-control form-control-sm"></td>
+        <td><input type="number" id="importo" class="form-control form-control-sm"></td>
+        <td><input type="number" id="saldato" class="form-control form-control-sm"></td>
+        <td><input type="number" id="extra-consegna" class="form-control form-control-sm"></td>
+        <td>
+          <select id="saldo" class="form-select form-select-sm">
+            <option value="">Stato Saldo</option>
+            <option value="Contanti">Contanti</option>
+            <option value="Assegno">Assegno</option>
+            <option value="Bonifico">Bonifico</option>
+            <option value="Pag. Negozio">Pag. Negozio</option>
+            <option value="Finanziamento">Finanziamento</option>
+            <option value="Sospeso">Sospeso</option>
+          </select>
+        </td>
+        <td><button class="btn btn-success btn-sm" onclick="salvaLavoro()">Salva</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

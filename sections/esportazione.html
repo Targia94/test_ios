@@ -1,0 +1,69 @@
+<h2 class="mb-4">Esportazione</h2>
+
+<!-- Tabs -->
+<ul class="nav nav-tabs mb-3">
+  <li class="nav-item">
+    <button
+      class="nav-link"
+      id="tab-timbrature"
+      onclick="mostraTab('timbrature')"
+    >
+      Timbrature
+    </button>
+  </li>
+  <li class="nav-item">
+    <button
+      class="nav-link active"
+      id="tab-attivita"
+      onclick="mostraTab('attivita')"
+    >
+      Attività
+    </button>
+  </li>
+</ul>
+
+<!-- Date pickers -->
+<div class="row g-3 mb-4">
+  <div class="col-md-3">
+    <label for="data-da" class="form-label">Data Da</label>
+    <input
+      type="date"
+      id="data-da"
+      class="form-control form-control-sm"
+      onchange="cercaDati()"
+    />
+  </div>
+  <div class="col-md-3">
+    <label for="data-a" class="form-label">Data A</label>
+    <input
+      type="date"
+      id="data-a"
+      class="form-control form-control-sm"
+      onchange="cercaDati()"
+    />
+  </div>
+</div>
+
+<!-- Bottone Esporta -->
+<div class="mb-3">
+  <button class="btn btn-danger mb-3" id="btn-esporta-pdf">Esporta PDF</button>
+</div>
+
+<!-- Tabella -->
+<table class="table table-bordered table-sm">
+  <thead class="table-light">
+    <tr>
+      <th>Commessa</th>
+      <th>Data</th>
+      <th>Cliente</th>
+      <th>Pagamento</th>
+      <th>Contratto</th>
+      <th>Saldo</th>
+      <th>Extra Consegna</th>
+    </tr>
+  </thead>
+  <tbody id="tabella-attivita-body"></tbody>
+</table>
+
+<!-- Riepilogo sotto la tabella -->
+<div id="riepilogo"></div>
